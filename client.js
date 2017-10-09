@@ -10,7 +10,7 @@ function f1() {
   $('body').on('click', '#delete', deleteDiv);
 }
 
-var count = 0;
+var count = 0, count2 = 0;
 
 function generateDiv() {
   count += 1;
@@ -21,7 +21,12 @@ function generateDiv() {
 }
 
 function swapColor() {
-  $(this).parent().css('background-color', 'yellow');
+  count2 += 1;
+  if (count2 % 2 === 1){
+    $(this).parent().css('background-color', 'yellow');
+  } else {
+    $(this).parent().css('background-color', 'red');
+  }
 }
 
 function deleteDiv() {
