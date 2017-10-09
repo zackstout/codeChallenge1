@@ -12,8 +12,9 @@ var count = 0;
 
 function generateDiv(){
   count += 1;
-  $('body').append('<div class="add"><p>' + count +
-  '</p></div>');
-
-
+  $('body').append('<div class="add"></div>');
+  $('body').children().last().append('<p>' + count +'</p>');
+  $('body').children().last().append('<button id="swap">Swap</button>');
+  $('body').children().last().append('<button id="delete">Delete</button>');
+  
 }
