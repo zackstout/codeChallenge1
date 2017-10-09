@@ -8,7 +8,12 @@ function f1() {
   $('#btn').on('click', '#gen', generateDiv);
 }
 
+var count = 0;
+
 function generateDiv(){
-  $('body').append('<div class="add"></div>');
+  count += 1;
+  $('body').append('<div class="add"><p>' + count +
+  '</p></div>');
+
 
 }
